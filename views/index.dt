@@ -1,15 +1,15 @@
 extends layout
 
 block body
-    div.container
+    div.container-fluid
         div.row
-            div.col-sm-6
+            div.col-sm-4
                 div.row
                     div ヘアアクセ１
                     div.row
                         div.col-sm-9
                             select.form-control
-                                option ゴーグル
+                                option ヘアアクセ
                         div.col-sm-3
                             div.input-group
                                 span.input-group-addon 強化値
@@ -46,40 +46,373 @@ block body
                                 input.form-control(type="number", placeholder="0", min="0")
                 div.row
                     div ヘアアクセ２
-                    select.form-control
-                        option 犬耳
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option ヘアアクセ
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span OP1
+                        div.col-sm-7
+                            select.form-control
+                                option OP
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 上昇値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span OP2
+                        div.col-sm-7
+                            select.form-control
+                                option OP
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 上昇値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span OP3
+                        div.col-sm-7
+                            select.form-control
+                                option OP
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 上昇値
+                                input.form-control(type="number", placeholder="0", min="0")
                 div.row
                     div ヘアアクセ３
-                    select.form-control
-                        option 紅葉
-            div.col-sm-6
-                div.row
-                    div ネックレス
-                    select.form-control
-                div.row
-                    div 左腕
-                    select.form-control
-                div.row
-                    div 右腕
-                    select.form-control
-        div.row
-            div.col-sm-6
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option ヘアアクセ
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span OP1
+                        div.col-sm-7
+                            select.form-control
+                                option OP
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 上昇値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span OP2
+                        div.col-sm-7
+                            select.form-control
+                                option OP
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 上昇値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span OP3
+                        div.col-sm-7
+                            select.form-control
+                                option OP
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 上昇値
+                                input.form-control(type="number", placeholder="0", min="0")
+            div.col-sm-4
                 div.row
                     div 上半身
-                    select.form-control
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 上半身
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span ジェム1
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム2
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム3
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
                 div.row
                     div 下半身
-                    select.form-control
-                div.row
-                    div 左手
-                    select.form-control
-            div.col-sm-6
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 下半身
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span ジェム1
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム2
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム3
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
                 div.row
                     div 腕
-                    select.form-control
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 腕
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span ジェム1
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム2
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム3
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
                 div.row
                     div 足
-                    select.form-control
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 足
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span ジェム1
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム2
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム3
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+            div.col-sm-4
+                div.row
+                    div ネックレス
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option ネックレス
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                div.row
+                    div 左腕
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 左腕
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                div.row
+                    div 右腕
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 右腕
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                div.row
+                    div 左手
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 足
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span ジェム1
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム2
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム3
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム4
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム5
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
                 div.row
                     div 右手
-                    select.form-control
+                    div.row
+                        div.col-sm-9
+                            select.form-control
+                                option 足
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0")
+                    div.row
+                        div.col-sm-2
+                            span ジェム1
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム2
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    div.row
+                        div.col-sm-2
+                            span ジェム3
+                        div.col-sm-7
+                            select.form-control
+                                option ジェム
+                        div.col-sm-3
+                            div.input-group
+                                span.input-group-addon 強化値
+                                input.form-control(type="number", placeholder="0", min="0", max="10")
