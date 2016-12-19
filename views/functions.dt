@@ -1,0 +1,15 @@
+- void gemSelect(string title, string id)
+    div.row
+        div.col-sm-2
+            span #{title}
+        div.col-sm-7
+            select.form-control(id='#{id}')
+                option(value='0') 無し
+                - foreach(gem; gems)
+                    option(value='#{gem.id}') #{gem.name}
+        div.col-sm-3
+            div.input-group
+                span.input-group-addon 強化値
+                input.form-control(type="number", placeholder="0", min="0", max="10")
+
+

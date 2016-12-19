@@ -135,38 +135,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span ジェム1
-                        div.col-sm-7
-                            select#armor-gem1.form-control
-                                option(value='0') 無し
-                                - foreach(gem; gems)
-                                    option(value='#{gem.id}') #{gem.name}
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム2
-                        div.col-sm-7
-                            select#armor-gem2.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム3
-                        div.col-sm-7
-                            select#armor-gem3.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    - gemSelect("ジェム１", "armor-gem1");
+                    - gemSelect("ジェム２", "armor-gem2");
+                    - gemSelect("ジェム３", "armor-gem3");
                 div.row
                     div 下半身
                     div.row
@@ -177,36 +148,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span ジェム1
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム2
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム3
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    - gemSelect("ジェム１", "pants-gem1");
+                    - gemSelect("ジェム２", "pants-gem2");
+                    - gemSelect("ジェム３", "pants-gem3");
                 div.row
                     div 腕
                     div.row
@@ -217,36 +161,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span ジェム1
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム2
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム3
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    - gemSelect("ジェム１", "gloves-gem1");
+                    - gemSelect("ジェム２", "gloves-gem2");
+                    - gemSelect("ジェム３", "gloves-gem3");
                 div.row
                     div 足
                     div.row
@@ -257,36 +174,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span ジェム1
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム2
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム3
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    - gemSelect("ジェム１", "boots-gem1");
+                    - gemSelect("ジェム２", "boots-gem2");
+                    - gemSelect("ジェム３", "boots-gem3");
             div.col-sm-4
                 div.row
                     div ネックレス
@@ -323,98 +213,26 @@ block body
                     div.row
                         div.col-sm-9
                             select.form-control
-                                option 足
+                                option 左手
                         div.col-sm-3
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span ジェム1
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム2
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム3
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム4
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム5
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    - gemSelect("ジェム１", "left-gem1");
+                    - gemSelect("ジェム２", "left-gem2");
+                    - gemSelect("ジェム３", "left-gem3");
+                    - gemSelect("ジェム４", "left-gem4");
+                    - gemSelect("ジェム５", "left-gem5");
                 div.row
                     div 右手
                     div.row
                         div.col-sm-9
                             select.form-control
-                                option 足
+                                option 右手
                         div.col-sm-3
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span ジェム1
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム2
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
-                    div.row
-                        div.col-sm-2
-                            span ジェム3
-                        div.col-sm-7
-                            select.form-control
-                                option ジェム
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 強化値
-                                input.form-control(type="number", placeholder="0", min="0", max="10")
+                    - gemSelect("ジェム１", "right-gem1");
+                    - gemSelect("ジェム２", "right-gem2");
+                    - gemSelect("ジェム３", "right-gem3");
