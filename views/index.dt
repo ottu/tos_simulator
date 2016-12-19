@@ -139,8 +139,10 @@ block body
                         div.col-sm-2
                             span ジェム1
                         div.col-sm-7
-                            select.form-control
-                                option ジェム
+                            select#armor-gem1.form-control
+                                option(value='0') 無し
+                                - foreach(gem; gems)
+                                    option(value='#{gem.id}') #{gem.name}
                         div.col-sm-3
                             div.input-group
                                 span.input-group-addon 強化値
@@ -149,7 +151,7 @@ block body
                         div.col-sm-2
                             span ジェム2
                         div.col-sm-7
-                            select.form-control
+                            select#armor-gem2.form-control
                                 option ジェム
                         div.col-sm-3
                             div.input-group
@@ -159,7 +161,7 @@ block body
                         div.col-sm-2
                             span ジェム3
                         div.col-sm-7
-                            select.form-control
+                            select#armor-gem3.form-control
                                 option ジェム
                         div.col-sm-3
                             div.input-group

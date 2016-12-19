@@ -1,0 +1,46 @@
+{
+    "comment": "id 1~4: defalut color gems (don't modified)",
+    "comment": "10000*n(1<=n<=4): class, 1=sword, 2=archer, 3=wizard, 4=cleric",
+    "comment": "100*n(1<=n<=15): job",
+    "comment": "1*n(1<=n<=99): skill id",
+
+    "gems": [
+        {
+            "id": 1,
+            "name": "レッドジェム"
+        },
+        {
+            "id": 2,
+            "name": "ブルージェム"
+        },
+        {
+            "id": 3,
+            "name": "グリーンジェム"
+        },
+        {
+            "id": 4,
+            "name": "イエロージェム"
+        },
+
+
+        {
+            "id": 10101,
+            "name": "チネンシー"
+        },
+
+        {
+            "id": 20101,
+            "name": "クリスタルスパイダー"
+        },
+
+        {
+            "id": 30101,
+            "name": "リーフバグ"
+        },
+
+        {
+            "id": 40101,
+            "name": "ハナミン"
+        }
+    ]
+}

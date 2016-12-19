@@ -1,8 +1,14 @@
 import vibe.d;
 import vibe.core.log;
 
+import tos.config;
+import std.stdio;
+
+Config config;
+
 shared static this()
 {
+    config = load_config;
 
     auto router = new URLRouter;
     router.get("/", &_index);
@@ -22,5 +28,6 @@ shared static this()
 
 void _index(HTTPServerRequest req, HTTPServerResponse res)
 {
-    res.render!("index.dt");
+    Gem[] gems = config.gems;
+    res.render!("index.dt", gems);
 }
