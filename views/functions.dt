@@ -12,4 +12,16 @@
                 span.input-group-addon 強化値
                 input.form-control(type="number", placeholder="0", min="0", max="10")
 
-
+- void getOption(string title, string id)
+    div.row
+        div.col-sm-2
+            span #{title}
+        div.col-sm-7
+            select.form-control(id='#{id}')
+                option(value='0') 無し
+                - foreach(opt; opts)
+                    option(value='#{opt.id}', min='#{opt.min}', max='#{opt.max}') #{opt.name}
+        div.col-sm-3
+            div.input-group
+                span.input-group-addon 上昇値
+                input.form-control(type="number", placeholder="0", min="0")

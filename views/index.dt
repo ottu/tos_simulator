@@ -14,36 +14,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP1
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP2
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP3
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
+                    - getOption("OP1", "hair1-op1");
+                    - getOption("OP2", "hair1-op2");
+                    - getOption("OP3", "hair1-op3");
                 div.row
                     div ヘアアクセ２
                     div.row
@@ -54,36 +27,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP1
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP2
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP3
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
+                    - getOption("OP1", "hair2-op1");
+                    - getOption("OP2", "hair2-op2");
+                    - getOption("OP3", "hair2-op3");
                 div.row
                     div ヘアアクセ３
                     div.row
@@ -94,36 +40,9 @@ block body
                             div.input-group
                                 span.input-group-addon 強化値
                                 input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP1
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP2
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
-                    div.row
-                        div.col-sm-2
-                            span OP3
-                        div.col-sm-7
-                            select.form-control
-                                option OP
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon 上昇値
-                                input.form-control(type="number", placeholder="0", min="0")
+                    - getOption("OP1", "hair3-op1");
+                    - getOption("OP2", "hair3-op2");
+                    - getOption("OP3", "hair3-op3");
             div.col-sm-4
                 div.row
                     div 上半身

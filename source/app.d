@@ -29,5 +29,6 @@ shared static this()
 void _index(HTTPServerRequest req, HTTPServerResponse res)
 {
     Gem[] gems = config.gems;
-    res.render!("index.dt", gems);
+    Option[] opts = config.options;
+    res.render!("index.dt", gems, opts);
 }
