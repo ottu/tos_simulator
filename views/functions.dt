@@ -9,7 +9,7 @@
                     option(value='#{gem.id}') #{gem.name}
         div.col-sm-3
             div.input-group
-                span.input-group-addon 強化値
+                span.input-group-addon +
                 input.form-control(type="number", placeholder="0", min="0", max="10")
 
 - void getOption(string title, string id)
@@ -20,8 +20,8 @@
             select.form-control(id='#{id}')
                 option(value='0') 無し
                 - foreach(opt; opts)
-                    option(value='#{opt.id}', min='#{opt.min}', max='#{opt.max}') #{opt.name}
+                    option(value='#{opt.id}', min='#{opt.hair.min}', max='#{opt.hair.max}') #{opt.name}
         div.col-sm-3
             div.input-group
-                span.input-group-addon 上昇値
+                span.input-group-addon +
                 input.form-control(type="number", placeholder="0", min="0")

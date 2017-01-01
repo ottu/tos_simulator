@@ -12,7 +12,7 @@ block body
                                 option ヘアアクセ
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - getOption("OP1", "hair1-op1");
                     - getOption("OP2", "hair1-op2");
@@ -25,7 +25,7 @@ block body
                                 option ヘアアクセ
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - getOption("OP1", "hair2-op1");
                     - getOption("OP2", "hair2-op2");
@@ -38,7 +38,7 @@ block body
                                 option ヘアアクセ
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - getOption("OP1", "hair3-op1");
                     - getOption("OP2", "hair3-op2");
@@ -52,7 +52,7 @@ block body
                                 option 上半身
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - gemSelect("ジェム１", "armor-gem1");
                     - gemSelect("ジェム２", "armor-gem2");
@@ -65,7 +65,7 @@ block body
                                 option 下半身
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - gemSelect("ジェム１", "pants-gem1");
                     - gemSelect("ジェム２", "pants-gem2");
@@ -78,7 +78,7 @@ block body
                                 option 腕
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - gemSelect("ジェム１", "gloves-gem1");
                     - gemSelect("ジェム２", "gloves-gem2");
@@ -91,7 +91,7 @@ block body
                                 option 足
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - gemSelect("ジェム１", "boots-gem1");
                     - gemSelect("ジェム２", "boots-gem2");
@@ -105,7 +105,7 @@ block body
                                 option ネックレス
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                 div.row
                     div 左腕
@@ -115,7 +115,7 @@ block body
                                 option 左腕
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                 div.row
                     div 右腕
@@ -125,7 +125,7 @@ block body
                                 option 右腕
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                 div.row
                     div 左手
@@ -135,7 +135,7 @@ block body
                                 option 左手
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - gemSelect("ジェム１", "left-gem1");
                     - gemSelect("ジェム２", "left-gem2");
@@ -150,7 +150,7 @@ block body
                                 option 右手
                         div.col-sm-3
                             div.input-group
-                                span.input-group-addon 強化値
+                                span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
                     - gemSelect("ジェム１", "right-gem1");
                     - gemSelect("ジェム２", "right-gem2");

@@ -3,6 +3,8 @@ import vibe.core.log;
 
 import tos.config;
 import std.stdio;
+import std.algorithm;
+import std.array;
 
 Config config;
 
@@ -29,6 +31,6 @@ shared static this()
 void _index(HTTPServerRequest req, HTTPServerResponse res)
 {
     Gem[] gems = config.gems;
-    Option[] opts = config.options;
+    Option[] opts = config.options.filter!(a=>!a.hair.isNull).array;
     res.render!("index.dt", gems, opts);
 }
