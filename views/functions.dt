@@ -1,3 +1,5 @@
+- import tos.config;
+
 - void gemSelect(string title, string id)
     div.row
         div.col-sm-2
@@ -25,3 +27,17 @@
             div.input-group
                 span.input-group-addon +
                 input.form-control(type="number", placeholder="0", min="0")
+
+- void protectSelect(string title, string id, Protect[] protects)
+    div #{title}
+    div.row
+        div.col-sm-9
+            select.form-control(id='#{id}')
+                option(value='0') 無し
+                - foreach(protect; protects)
+                    option(value='#{protect.id}') #{protect.name}
+        div.col-sm-3
+            div.input-group
+                span.input-group-addon +
+                input.form-control(type="number", placeholder="0", min="0")
+

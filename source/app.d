@@ -11,6 +11,7 @@ Config config;
 shared static this()
 {
     config = load_config;
+    writeln(config);
 
     auto router = new URLRouter;
     router.get("/", &_index);
@@ -32,5 +33,9 @@ void _index(HTTPServerRequest req, HTTPServerResponse res)
 {
     Gem[] gems = config.gems;
     Option[] opts = config.options.filter!(a=>!a.hair.isNull).array;
-    res.render!("index.dt", gems, opts);
+    Protect[] shirts = config.shirts;
+    Protect[] pants  = config.pants;
+    Protect[] boots  = config.boots;
+    Protect[] gloves = config.gloves;
+    res.render!("index.dt", gems, opts, shirts, pants, boots, gloves);
 }
