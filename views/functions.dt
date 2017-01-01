@@ -1,5 +1,19 @@
 - import tos.config;
 
+- void statsField(string title, string id)
+    div.col-sm-2
+        div#row-height.row
+            p #{title}
+        div.row
+            input.form-control(id='stats_#{id}_total', type="text", readonly="readonly")
+        div.row
+            input.form-control(id='stats_#{id}_bonus', type="text", readonly="readonly")
+        div.row
+            input.form-control(id='stats_#{id}_base', type="text", readonly="readonly")
+        div.row
+            input.form-control(id='stats_#{id}_point', type="number", placeholder="0", min="0")
+
+
 - void gemSelect(string title, string id)
     div.row
         div.col-sm-2
@@ -40,4 +54,3 @@
             div.input-group
                 span.input-group-addon +
                 input.form-control(type="number", placeholder="0", min="0")
-

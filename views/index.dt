@@ -3,6 +3,41 @@ extends layout
 block body
     div.container-fluid
         div.row
+            div.col-sm-2
+                div.row
+                    div.input-group
+                        span.input-group-addon 職業
+                        select#stats_job.form-control
+                            - foreach(job; Jobs)
+                                option(data-id='#{job.id}', data-str='#{job.strength}', data-con='#{job.constitution}', data-int='#{job.intelligence}', data-spr='#{job.spirit}', data-dex='#{job.dexterity}', data-hp='#{job.hp_modifier}', data-sp='#{job.sp_modifier}') #{job.name}
+                div.row
+                    div.input-group
+                        span.input-group-addon レベル
+                        input#stats_level.form-control(type="number", placeholder="1", min="1", max="330")
+                div.row
+                    div.input-group
+                        span.input-group-addon ステポ
+                        input#stats_point.form-control(placeholder="0", readonly="readonly")
+            div.col-sm-4
+                div.row
+                    div.col-sm-2
+                        div#row-height.row
+                            p ステ
+                        div#row-height.row
+                            p 合計
+                        div#row-height.row
+                            p ボーナス
+                        div#row-height.row
+                            p ベース
+                        div#row-height.row
+                            p 振分
+                    - statsField("力", "str");
+                    - statsField("体力", "con");
+                    - statsField("知力", "int");
+                    - statsField("精神", "spr");
+                    - statsField("敏捷", "dex");
+            div.col-sm-6
+        div.row
             div.col-sm-4
                 div.row
                     div ヘアアクセ１

@@ -6,3 +6,8 @@
 .row > div {
     text-align: center;
 }
+
+#row-height {
+    height: 34px;
+    line-height: 34px;
+}

@@ -1,7 +1,10 @@
 import vibe.d;
 import vibe.core.log;
+import vibe.data.json;
 
 import tos.config;
+import tos.consts;
+
 import std.stdio;
 import std.algorithm;
 import std.array;
@@ -16,6 +19,8 @@ shared static this()
     auto router = new URLRouter;
     router.get("/", &_index);
     router.get("*", serveStaticFiles("public/"));
+
+    router.get("/api/jobs", &_jobs);
 
 	auto settings = new HTTPServerSettings;
 	settings.port = 8080;
@@ -37,5 +42,11 @@ void _index(HTTPServerRequest req, HTTPServerResponse res)
     Protect[] pants  = config.pants;
     Protect[] boots  = config.boots;
     Protect[] gloves = config.gloves;
-    res.render!("index.dt", gems, opts, shirts, pants, boots, gloves);
+    res.render!("index.dt", Jobs, gems, opts, shirts, pants, boots, gloves);
+}
+
+void _jobs(HTTPServerRequest req, HTTPServerResponse res)
+{
+    Json json = Jobs.serializeToJson();
+    res.writeJsonBody(json);
 }
