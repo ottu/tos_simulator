@@ -6,65 +6,19 @@ block body
             div.col-sm-4
                 div.row
                     div ヘアアクセ１
-                    div.row
-                        div.col-sm-9
-                            select.form-control
-                                option ヘアアクセ
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon +
-                                input.form-control(type="number", placeholder="0", min="0")
                     - getOption("OP1", "hair1-op1");
                     - getOption("OP2", "hair1-op2");
                     - getOption("OP3", "hair1-op3");
                 div.row
                     div ヘアアクセ２
-                    div.row
-                        div.col-sm-9
-                            select.form-control
-                                option ヘアアクセ
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon +
-                                input.form-control(type="number", placeholder="0", min="0")
                     - getOption("OP1", "hair2-op1");
                     - getOption("OP2", "hair2-op2");
                     - getOption("OP3", "hair2-op3");
                 div.row
                     div ヘアアクセ３
-                    div.row
-                        div.col-sm-9
-                            select.form-control
-                                option ヘアアクセ
-                        div.col-sm-3
-                            div.input-group
-                                span.input-group-addon +
-                                input.form-control(type="number", placeholder="0", min="0")
                     - getOption("OP1", "hair3-op1");
                     - getOption("OP2", "hair3-op2");
                     - getOption("OP3", "hair3-op3");
-            div.col-sm-4
-                div.row
-                    - protectSelect("上半身", "shirts", shirts);
-                    - gemSelect("ジェム１", "armor-gem1");
-                    - gemSelect("ジェム２", "armor-gem2");
-                    - gemSelect("ジェム３", "armor-gem3");
-                div.row
-                    - protectSelect("下半身", "pants", pants);
-                    - gemSelect("ジェム１", "pants-gem1");
-                    - gemSelect("ジェム２", "pants-gem2");
-                    - gemSelect("ジェム３", "pants-gem3");
-                div.row
-                    - protectSelect("腕", "gloves", gloves);
-                    - gemSelect("ジェム１", "gloves-gem1");
-                    - gemSelect("ジェム２", "gloves-gem2");
-                    - gemSelect("ジェム３", "gloves-gem3");
-                div.row
-                    - protectSelect("足", "boots", boots);
-                    - gemSelect("ジェム１", "boots-gem1");
-                    - gemSelect("ジェム２", "boots-gem2");
-                    - gemSelect("ジェム３", "boots-gem3");
-            div.col-sm-4
                 div.row
                     div ネックレス
                     div.row
@@ -95,6 +49,29 @@ block body
                             div.input-group
                                 span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
+
+            div.col-sm-4
+                div.row
+                    - protectSelect("上半身", "shirts", shirts);
+                    - gemSelect("ジェム１", "armor-gem1");
+                    - gemSelect("ジェム２", "armor-gem2");
+                    - gemSelect("ジェム３", "armor-gem3");
+                div.row
+                    - protectSelect("下半身", "pants", pants);
+                    - gemSelect("ジェム１", "pants-gem1");
+                    - gemSelect("ジェム２", "pants-gem2");
+                    - gemSelect("ジェム３", "pants-gem3");
+                div.row
+                    - protectSelect("腕", "gloves", gloves);
+                    - gemSelect("ジェム１", "gloves-gem1");
+                    - gemSelect("ジェム２", "gloves-gem2");
+                    - gemSelect("ジェム３", "gloves-gem3");
+                div.row
+                    - protectSelect("足", "boots", boots);
+                    - gemSelect("ジェム１", "boots-gem1");
+                    - gemSelect("ジェム２", "boots-gem2");
+                    - gemSelect("ジェム３", "boots-gem3");
+            div.col-sm-4
                 div.row
                     div 左手
                     div.row
