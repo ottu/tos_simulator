@@ -54,3 +54,9 @@
             div.input-group
                 span.input-group-addon +
                 input.form-control(type="number", placeholder="0", min="0")
+
+- void paramField(string title, string id)
+    div.row
+        div.input-group
+            span.input-group-addon #{title}
+            input.form-control(id='#{id}', placement="0", min="0", readonly="readonly")

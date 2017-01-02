@@ -11,3 +11,7 @@
     height: 34px;
     line-height: 34px;
 }
+
+input.form-control {
+    text-align: right;
+}

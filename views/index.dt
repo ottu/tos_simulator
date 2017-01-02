@@ -12,11 +12,19 @@ block body
                                 option(data-id='#{job.id}', data-str='#{job.strength}', data-con='#{job.constitution}', data-int='#{job.intelligence}', data-spr='#{job.spirit}', data-dex='#{job.dexterity}', data-hp='#{job.hp_modifier}', data-sp='#{job.sp_modifier}') #{job.name}
                 div.row
                     div.input-group
-                        span.input-group-addon レベル
+                        span.input-group-addon ランクレベル
+                        input#stats_rank.form-control(type="number", placeholder="1", min="1", max="8")
+                div.row
+                    div.input-group
+                        span.input-group-addon キャラレベル
                         input#stats_level.form-control(type="number", placeholder="1", min="1", max="330")
                 div.row
                     div.input-group
-                        span.input-group-addon ステポ
+                        span.input-group-addon 獲得ステポ
+                        input#stats_additional_status_point.form-control(type="number", placeholder="0", min="0")
+                div.row
+                    div.input-group
+                        span.input-group-addon 合計ステポ
                         input#stats_point.form-control(placeholder="0", readonly="readonly")
             div.col-sm-4
                 div.row
@@ -84,7 +92,6 @@ block body
                             div.input-group
                                 span.input-group-addon +
                                 input.form-control(type="number", placeholder="0", min="0")
-
             div.col-sm-4
                 div.row
                     - protectSelect("上半身", "shirts", shirts);
@@ -135,3 +142,27 @@ block body
                     - gemSelect("ジェム１", "right-gem1");
                     - gemSelect("ジェム２", "right-gem2");
                     - gemSelect("ジェム３", "right-gem3");
+        div.row
+            div.col-sm-2
+                - paramField("HP", "hp_param");
+                - paramField("SP", "sp_param");
+                - paramField("HP回復力", "hp_recover_param");
+                - paramField("SP回復力", "sp_recover_param");
+                - paramField("広域攻撃比率", "aoe_attack_param");
+                - paramField("広域防御比率", "aoe_defence_param");
+                - paramField("ブロック", "block_param");
+                - paramField("ブロック貫通", "block_penetration_param");
+                - paramField("スタミナ", "stamina_param");
+                - paramField("所持重量", "weight_imit_param");
+            div.col-sm-2
+                - paramField("物理攻撃力", "physical_attack_param");
+                - paramField("魔法攻撃力", "magic_attack_param");
+                - paramField("物理防御力", "physical_defence_param");
+                - paramField("魔法防御力", "magic_defence_param");
+                - paramField("命中", "accuracy_param");
+                - paramField("回避", "evasion_param");
+                - paramField("クリティカル攻撃力", "critical_attack_param");
+                - paramField("クリティカル発生", "critical_rate_param");
+                - paramField("クリティカル抵抗", "critical_resistance_param");
+                - paramField("魔法増幅", "magic_amplification_param");
+            div.col-sm-8

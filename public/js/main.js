@@ -10,6 +10,8 @@
     ];
 
     function calcTotal(identify){
+        console.log("calcTotal");
+
         var preID = "#stats_" + identify;
         var pointID = preID + "_point";
         var baseID = preID + "_base";
@@ -38,19 +40,36 @@
             break;
         };
 
+        var totalStat = point + base + bonus;
+
+        // rank status bonus
+        if (["str", "int"].indexOf(identify) >= 0) {
+            var rank = Number($("#stats_rank").val());
+            var coefficient = 1 + ( (rank-1) * 0.1 );
+
+            var additionalBonus = Math.floor(totalStat * coefficient) - totalStat;
+            bonus += additionalBonus;
+            totalStat += additionalBonus;
+        }
+
         $(bonusID).val(bonus);
-        $(totalID).val(point + base + bonus);
+        $(totalID).val(totalStat);
     };
 
     function calcStatsPoint() {
+        console.log("calcStatsPoint");
+
         var strength = $("#stats_str_point").val();
         var constitution = $("#stats_con_point").val();
         var intelligence = $("#stats_int_point").val();
         var spirit = $("#stats_spr_point").val();
         var dexterity = $("#stats_dex_point").val();
 
+        var lv = Number($("#stats_level").val());
+        var asp = Number($("#stats_additional_status_point").val());
+
         $("#stats_point").val(
-            $("#stats_level").val() - 1 -
+            lv - 1 + asp -
             strength -
             constitution -
             intelligence -
@@ -59,18 +78,62 @@
         );
     }
 
+    function calcParameters() {
+        console.log("calcParameters");
+        // stats total
+        var strength = Number($("#stats_str_total").val());
+        var constitution = Number($("#stats_con_total").val());
+        var intelligence = Number($("#stats_int_total").val());
+        var spirit = Number($("#stats_spr_total").val());
+        var dexterity = Number($("#stats_dex_total").val());
+
+        var job_opt = $("#stats_job option:selected");
+        var lv_input = $("#stats_level");
+        var hp_mod = Number(job_opt.data("hp"));
+        var sp_mod = Number(job_opt.data("sp"));
+        var lv = Number(lv_input.val());
+
+        // HP
+        var hp = hp_mod * ((lv - 1) * 17) + constitution * 85;
+        $("#hp_param").val(Math.floor(hp));
+
+        // SP
+        var sp = sp_mod * ((lv - 1) * 6.7) + spirit * 13;
+        if (job_opt.data("id") == 4) {
+            sp = sp + lv * 1.675;
+        }
+        $("#sp_param").val(Math.floor(sp));
+
+        // HP Recovery
+        var hp_recover = lv * 0.5 + constitution;
+        $("#hp_recover_param").val(Math.floor(hp_recover));
+
+        // SP Recover
+        var sp_recover = lv * 0.5 + spirit;
+        if (job_opt.data("id") == 4) {
+            sp_recover = sp_recover + lv * 0.25;
+        }
+        $("#sp_recover_param").val(Math.floor(sp_recover));
+
+        // Physical Attack
+        var pa = strength + lv;
+        $("#physical_attack_param").val(pa);
+
+        // Magic Attack
+        var ma = intelligence + lv;
+        $("#magic_attack_param").val(ma);
+    }
+
     function resetStatPoints() {
+        console.log("resetStatPoints");
+
         $("#stats_str_point").val(0).change();
         $("#stats_con_point").val(0).change();
         $("#stats_int_point").val(0).change();
         $("#stats_spr_point").val(0).change();
         $("#stats_dex_point").val(0).change();
 
-        calcTotal("str");
-        calcTotal("con");
-        calcTotal("int");
-        calcTotal("spr");
-        calcTotal("dex");
+        calcParameters();
     }
 
     $("#stats_job").change(function(){
@@ -87,33 +150,35 @@
         resetStatPoints();
     });
 
-    $("#stats_level").change(function(){
-        var val = $(this).val();
-        $("#stats_point").val(val-1);
+    $("#stats_rank").change(function(){
+        $("#stats_str_point").change();
+        $("#stats_int_point").change();
+    });
 
+    $("#stats_level").change(function(){
         resetStatPoints();
     });
 
-    $("#stats_str_point").change(function(){
-        calcTotal("str");
-        calcStatsPoint();
-    });
-    $("#stats_con_point").change(function(){
-        calcTotal("con");
-        calcStatsPoint();
-    });
-    $("#stats_int_point").change(function(){
-        calcTotal("int");
-        calcStatsPoint();
-    });
-    $("#stats_spr_point").change(function(){
-        calcTotal("spr");
-        calcStatsPoint();
-    });
-    $("#stats_dex_point").change(function(){
-        calcTotal("dex");
-        calcStatsPoint();
-    });
+    $("#stats_additional_status_point").change(function(){
+        resetStatPoints();
+    })
 
+    function calcTotalCallback(name) {
+        console.log("calcTotalCallback");
+        console.log(name);
+        calcTotal(name);
+        calcStatsPoint();
+        calcParameters();
+    }
+
+    $("#stats_str_point").change(function(){calcTotalCallback("str")});
+    $("#stats_con_point").change(function(){calcTotalCallback("con")});
+    $("#stats_int_point").change(function(){calcTotalCallback("int")});
+    $("#stats_spr_point").change(function(){calcTotalCallback("spr")});
+    $("#stats_dex_point").change(function(){calcTotalCallback("dex")});
+
+    $("#stats_rank").val(1);
+    $("#stats_level").val(1);
+    $("#stats_additional_status_point").val(0);
     $("#stats_job").change();
 })(jQuery)
