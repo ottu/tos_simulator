@@ -153,7 +153,7 @@ block body
                 - paramField("ブロック", "block_param");
                 - paramField("ブロック貫通", "block_penetration_param");
                 - paramField("スタミナ", "stamina_param");
-                - paramField("所持重量", "weight_imit_param");
+                - paramField("所持重量", "weight_limit_param");
             div.col-sm-2
                 - paramField("物理攻撃力", "physical_attack_param");
                 - paramField("魔法攻撃力", "magic_attack_param");

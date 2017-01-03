@@ -105,7 +105,8 @@
         $("#sp_param").val(Math.floor(sp));
 
         // HP Recovery
-        var hp_recover = lv * 0.5 + constitution;
+        //var hp_recover = lv * 0.5 + constitution;
+        var hp_recover = lv * 1.6 + constitution;
         $("#hp_recover_param").val(Math.floor(hp_recover));
 
         // SP Recover
@@ -122,6 +123,51 @@
         // Magic Attack
         var ma = intelligence + lv;
         $("#magic_attack_param").val(ma);
+
+        // Physical Defence
+        var pd = Math.floor(lv/2) + Math.floor(lv/4);
+        $("#physical_defence_param").val(pd);
+
+        // Magic Defence
+        var md = Math.floor(lv/2) + Math.floor(lv/4) + Math.floor(spirit/5);
+        $("#magic_defence_param").val(md);
+
+        // Accuracy
+        var acc = dexterity + lv;
+        if (job_opt.data("id") == 3) {
+            acc = acc + Math.floor( (lv + 4) / 4 );
+        }
+        $("#accuracy_param").val(acc);
+
+        // Evasion
+        var ev = dexterity + lv;
+        if (job_opt.data("id") == 3) {
+            ev = ev + Math.floor(lv / 8);
+        }
+        $("#evasion_param").val(ev);
+
+        // Critical Attack
+        var ca = strength;
+        $("#critical_attack_param").val(ca);
+
+        // Critical Rate
+        var cr = dexterity;
+        if (job_opt.data("id") == 3) {
+            cr = cr + Math.floor(lv / 5);
+        }
+        $("#critical_rate_param").val(cr);
+
+        // Critical Resistance
+
+        // Block Penetration
+        var bp = Math.floor(lv * 0.5) + strength;
+        $("#block_penetration").val(bp);
+
+        // Block
+
+        // Weight Limit
+        var wl = 5000 + strength * 5 + constitution * 5;
+        $("#weight_limit_param").val(wl);
     }
 
     function resetStatPoints() {
