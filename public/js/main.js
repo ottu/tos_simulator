@@ -98,6 +98,7 @@
         $("#hp_param").val(Math.floor(hp));
 
         // SP
+        // TODO: Buggy
         var sp = sp_mod * ((lv - 1) * 6.7) + spirit * 13;
         if (job_opt.data("id") == 4) {
             sp = sp + lv * 1.675;
@@ -105,11 +106,13 @@
         $("#sp_param").val(Math.floor(sp));
 
         // HP Recovery
+        // TODO: Buggy
         //var hp_recover = lv * 0.5 + constitution;
         var hp_recover = lv * 1.6 + constitution;
         $("#hp_recover_param").val(Math.floor(hp_recover));
 
         // SP Recover
+        // TODO: Buggy
         var sp_recover = lv * 0.5 + spirit;
         if (job_opt.data("id") == 4) {
             sp_recover = sp_recover + lv * 0.25;
@@ -125,10 +128,12 @@
         $("#magic_attack_param").val(ma);
 
         // Physical Defence
+        // TODO: Buggy
         var pd = Math.floor(lv/2) + Math.floor(lv/4);
         $("#physical_defence_param").val(pd);
 
         // Magic Defence
+        // TODO: Buggy
         var md = Math.floor(lv/2) + Math.floor(lv/4) + Math.floor(spirit/5);
         $("#magic_defence_param").val(md);
 
@@ -151,13 +156,15 @@
         $("#critical_attack_param").val(ca);
 
         // Critical Rate
-        var cr = dexterity;
+        var cra = dexterity;
         if (job_opt.data("id") == 3) {
-            cr = cr + Math.floor(lv / 5);
+            cra = cra + Math.floor(lv / 5);
         }
-        $("#critical_rate_param").val(cr);
+        $("#critical_rate_param").val(cra);
 
         // Critical Resistance
+        var cre = constitution;
+        $("#critical_resistance_param").val(cre);
 
         // Block Penetration
         var bp = Math.floor(lv * 0.5) + strength;
